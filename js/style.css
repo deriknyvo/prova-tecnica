@@ -299,3 +299,8 @@ button {
 label {
     font-size: 14px;
 }
+
+#menor {
+    color: red;
+    display: none;
+}
