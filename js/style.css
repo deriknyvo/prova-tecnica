@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    padding: 0 20px;
+    background-color: #673ab7;
+    color: #fff;
+}
+
+.account {
+    font-size: 34px !important;
+}
+
+.title {
+    font-size: 27px;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.sidebar {
+    border-right: 1px solid #d8d8d8;
+    background-color: white;
+    width: 15%;
+    height: 100%;
+}
+
+aside {
+    height: 45px;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    display: flex;
+    background-color: #d8d7e0;
+    color: #584aa8;
+    cursor: pointer;
+}
+
+.container {
+    width: 85%;
+    padding: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.content {
+    margin-top: 15px;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+input {
+    width: 100%;
+}
+
+.input-container {
+    height: 45px;
+    position: relative;
+    margin: 0 15px;
+    width: 50%;
+}
+
+.input-container input {
+    padding: 12px 5px 5px 5px;
+    height: 36px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 1.2px solid #d2d2d2;
+    transition: all 100ms ease-in;
+}
+
+.input-container label {
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    color: #747474;
+    transition: all 100ms ease-in;
+}
+
+.input-container input:focus + label {
+    font-size: 12px;
+    top: -5px;
+    left: 4px;
+    color: #6703a5e6;
+    transition: all 100ms ease-in;
+}
+
+.input-container input:focus {
+    border-bottom: 1.2px solid #6703a5e6;
+    transition: all 100ms ease-in;
+}
+
+.input-container input:valid + label {
+    top: -5px;
+    left: 4px;
+}
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+input[type=date]:focus::-webkit-datetime-edit {
+    color: black !important;
+}
+
+.row {
+    display: flex;
+    margin: 5px 0;
+}
+
+select {
+    width: 100%;
+    background: white;
+}
+
+.select {
+    height: 45px;
+    position: relative;
+    margin: 0 15px;
+}
+
+.select select {
+    padding: 12px 5px 5px 5px;
+    height: 36px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-bottom: 1.2px solid #d2d2d2;
+    transition: all 100ms ease-in;
+}
+
+.select label {
+    position: absolute;
+    top: 9px;
+    left: 3px;
+    color: #747474;
+    transition: all 100ms ease-in;
+}
+
+.select select:focus + label {
+    font-size: 12px;
+    top: -5px;
+    left: 4px;
+    color: #6703a5e6;
+    transition: all 100ms ease-in;
+}
+
+.select select:focus {
+    border-bottom: 1.2px solid #6703a5e6;
+    transition: all 100ms ease-in;
+}
+
+.select select:valid + label {
+    top: -5px;
+    left: 4px;
+}
+
+.textarea {
+  position: relative;
+  padding: 15px 0 0;
+  margin: 0 15px;
+  width: 100%;
+}
+
+textarea {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d2d2d2;
+  outline: 0;
+  font-size: 16px;
+  color: #212121;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+textarea::placeholder {
+  color: transparent;
+}
+
+textarea:placeholder-shown ~ .form-label {
+  font-size: 16px;
+  cursor: text;
+  top: 20px;
+}
+
+label, textarea:focus ~ .form-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 12px;
+  color: #747474;
+}
+
+textarea:focus ~ .form-label {
+  color: #6703a5e6;
+}
+
+textarea:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #6703a5e6;
+}
+
+.buttons {
+    margin: 25px 15px 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    margin: 0 3px;
+    padding: 5px;
+}
+
+.btn {
+    position: relative;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #673ab7;
+    color: #ecf0f1;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+  
+.btn:hover, .btn:focus {
+    background-color: #673ab7;
+}
+
+.btn > * {
+    position: relative;
+}
+
+.btn span {
+    display: block;
+    padding: 12px 24px;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 0;
+    padding-top: 0;
+    border-radius: 100%;
+    background-color: rgba(236, 240, 241, .3);
+    transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn.red {
+    background-color: #e74c3c;
+}
+
+.btn.red:hover, .btn.red:focus {
+    background-color: #c0392b;
+}
+
+label {
+    font-size: 14px;
+}

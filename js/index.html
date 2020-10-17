@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="toolbar">
+        <span class="material-icons">menu</span>
+        <span class="title">Sabium</span>
+        <span class="material-icons account">account_circle</span>
+    </div>
+
+    <main>
+        <div class="sidebar">
+            <aside>CLIENTES</aside>
+        </div>
+
+        <div class="container">
+            <section class="header">
+                <h1>Novo cliente</h1>
+            </section>
+            <hr>
+            <section class="content">
+                <form id="form" name="form">
+                    <div class="row">
+                        <div class="input-container">
+                            <input type="text" id="name" required>
+                            <label for="name">Nome</label>
+                        </div>
+
+                        <div class="input-container">
+                            <input type="email" id="email" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-container">
+                            <input type="date" id="dayOfBirth" required>
+                            <label for="dayOfBirth">Data de nascimento</label>
+                        </div>
+
+                        <div class="select input-container">
+                            <select class="select-text" required>
+                                <option value="" disabled selected></option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                                <option value="other">Outro</option>
+                            </select>
+                            <label class="select-label">Gênero</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="textarea">
+                            <textarea id="description" placeholder="Insira uma pequena descrição" rows="3"
+                                required></textarea>
+                            <label for="description" class="form-label">Insira uma pequena descrição</label>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button class="btn red" type="button">
+                            <span>Cancelar</span>
+                        </button>
+
+                        <button class="btn" type="submit">
+                            <span>Salvar</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>

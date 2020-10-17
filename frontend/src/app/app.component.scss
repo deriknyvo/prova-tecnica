@@ -1,0 +1,30 @@
+.app-container {
+    height: 100vh;
+    overflow: hidden;
+
+    .toolbar {
+        justify-content: space-between;
+    
+        .icon-account-circle {
+            transform: scale(1.5);
+        }
+    }
+    
+    .sidenav {
+        height: 100%;
+    
+        .menus {
+            height: 100%;
+            width: 15vw;
+
+            .sidenav-item-selected {
+                background: rgba(63,81,181,.15);
+                color: #673ab7;
+            }
+
+            .mat-list-base {
+                padding-top: 0;
+            }
+        }
+    }
+}

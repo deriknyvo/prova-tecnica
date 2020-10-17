@@ -1,0 +1,25 @@
+<div class="app-container">
+    <mat-toolbar color="primary" class="toolbar">
+        <button (click)="sidenav.toggle();" mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>Sabium</span>
+        <button mat-icon-button>
+            <mat-icon class="icon-account-circle">account_circle</mat-icon>
+        </button>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav">
+        <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+            <div class="menus">
+                <mat-nav-list>
+                    <a mat-list-item routerLink="/clients" routerLinkActive="sidenav-item-selected">CLIENTES</a>
+                </mat-nav-list>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

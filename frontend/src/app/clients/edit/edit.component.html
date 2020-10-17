@@ -1,0 +1,71 @@
+<div class="create-container">
+    <div class="header">
+        <h1>Editar cliente</h1>
+        <button routerLink="/clients" matTooltip="Voltar" matTooltipPosition="before" mat-mini-fab color="primary">
+            <mat-icon>keyboard_backspace</mat-icon>
+        </button>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+    <mat-card>
+        <form class="p-2" [formGroup]="form">
+            <div class="row">
+                <div class="col-6 px-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Nome</mat-label>
+                        <input matInput formControlName="name">
+                        <mat-error *ngIf="form.controls.name.errors?.required">É preciso informar o nome</mat-error>
+                        <mat-error *ngIf="form.controls.name.errors?.minlength">O nome deve conter mais que 5 caracteres
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-6 px-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput type="email" formControlName="email">
+                        <mat-error *ngIf="form.controls.email.errors?.required">É preciso informar um e-mail</mat-error>
+                        <mat-error *ngIf="form.controls.email.errors?.email">O e-mail precisa ser válido</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6 px-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>CPF</mat-label>
+                        <input matInput mask="000.000.000-00" formControlName="cpf">
+                        <mat-error *ngIf="form.controls.cpf.errors?.required">É preciso informar o CPF</mat-error>
+                        <mat-error *ngIf="form.controls.cpf.errors?.cpfInvalid">O CPF deve ser válido
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-3 px-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Data de nascimento</mat-label>
+                        <input matInput mask="00/00/0000" formControlName="dateOfBirth">
+
+                        <mat-error *ngIf="form.controls.dateOfBirth.errors?.required">
+                            É preciso informar a data de nascimento
+                        </mat-error>
+                        <mat-error *ngIf="form.controls.dateOfBirth.errors?.ageInvalid">
+                            Deve ser maior que 18 anos
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-3 px-2">
+                    <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Idade</mat-label>
+                        <input matInput readonly formControlName="age">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button mat-button routerLink="/clients">Cancelar</button>
+                <button [disabled]="form.invalid" (click)="edit()" mat-raised-button color="primary">Salvar</button>
+            </div>
+        </form>
+    </mat-card>
+</div>

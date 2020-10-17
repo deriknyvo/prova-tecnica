@@ -1,0 +1,33 @@
+:host ::ng-deep {
+    .mat-form-field-wrapper {
+        margin: 0 8px;
+    }
+}
+
+.create-container {
+    padding: 40px 50px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            margin-bottom: 16px;
+        }
+    }
+
+    .divider {
+        margin-bottom: 25px;
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 15px;
+
+    button {
+        margin: 0 5px;
+    }
+}
