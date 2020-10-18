@@ -67,7 +67,7 @@ const customersController = {
     },
 
     async destroy(req, res) {
-        const id = req.params.i
+        const id = req.params.id
 
         await customersRepository.delete(id).catch((err) => {
             res.status(500).json({
